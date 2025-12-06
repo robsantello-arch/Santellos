@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santello's Paninoteca and Café - Investment Opportunity</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Georgia', serif;
+        line-height: 1.6;
+        color: #2c2c2c;
+        background-color: #fafafa;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header {
+        background: linear-gradient(135deg, #1a1a1a 0%, #3d3d3d 100%);
+        color: #d4af37;
+        padding: 80px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><text x="50%" y="50%" font-size="60" text-anchor="middle" dominant-baseline="middle" opacity="0.1" fill="%23d4af37">🦁</text></svg>');
+        opacity: 0.1;
+    }
+
+    h1 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        font-weight: 300;
+        letter-spacing: 3px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .tagline {
+        font-size: 1.3em;
+        font-style: italic;
+        color: #e8d4a0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .section-dark {
+        background-color: #fff;
+    }
+
+    .section-light {
+        background-color: #f5f5f5;
+    }
+
+    h2 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        color: #d4af37;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    h3 {
+        font-size: 1.8em;
+        margin: 30px 0 15px;
+        color: #3d3d3d;
+        font-weight: 400;
+    }
+
+    .concept-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .concept-card {
+        background: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .concept-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .concept-card h3 {
+        color: #d4af37;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .highlight-box {
+        background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+        color: #e8d4a0;
+        padding: 40px;
+        border-radius: 8px;
+        margin: 40px 0;
+        border-left: 5px solid #d4af37;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .stat-box {
+        text-align: center;
+        padding: 30px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .stat-number {
+        font-size: 2.5em;
+        color: #d4af37;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .stat-label {
+        font-size: 1.1em;
+        color: #666;
+    }
+
+    ul {
+        list-style: none;
+        margin: 20px 0;
+    }
+
+    li {
+        padding: 10px 0;
+        padding-left: 30px;
+        position: relative;
+    }
+
+    li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: #d4af37;
+        font-weight: bold;
+    }
+
+    .cta-section {
+        background: linear-gradient(135deg, #1a1a1a 0%, #3d3d3d 100%);
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .cta-section h2 {
+        color: #d4af37;
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background-color: #d4af37;
+        color: #1a1a1a;
+        padding: 15px 40px;
+        margin: 20px 10px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.2em;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #e8d4a0;
+        transform: scale(1.05);
+    }
+
+    footer {
+        background-color: #1a1a1a;
+        color: #999;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .experience-box {
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        margin: 20px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            font-size: 2em;
+        }
+        
+        .concept-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>SANTELLO'S</h1>
+            <p class="tagline">Paninoteca and Café</p>
+            <p style="margin-top: 20px; font-size: 1.1em;">Bradley Beach, New Jersey • Spring 2026</p>
+        </div>
+    </header>
+
+```
+<section class="section section-dark">
+    <div class="container">
+        <h2>The Vision</h2>
+        <p style="text-align: center; font-size: 1.2em; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+            Santello's reimagines the Italian dining experience through two distinct identities: 
+            an authentic daytime paninoteca celebrating Sicilian café culture, and an exclusive 
+            Friday night fine dining destination showcasing contemporary Italian cuisine.
+        </p>
+
+        <div class="concept-grid">
+            <div class="concept-card">
+                <h3>🥖 Daytime Paninoteca</h3>
+                <p><strong>Monday - Saturday, Lunch & Early Dinner</strong></p>
+                <ul>
+                    <li>Authentic Italian panini and sandwiches</li>
+                    <li>Sicilian-style café atmosphere</li>
+                    <li>Casual, accessible dining</li>
+                    <li>Strong community presence</li>
+                    <li>High-volume, efficient service</li>
+                </ul>
+            </div>
+
+            <div class="concept-card">
+                <h3>🍷 Friday Fine Dining</h3>
+                <p><strong>Friday Evenings Only</strong></p>
+                <ul>
+                    <li>Exclusive 5-course prix fixe menu</li>
+                    <li>Vegetarian options available</li>
+                    <li>Limited seating reservation-only</li>
+                    <li>Contemporary Italian techniques</li>
+                    <li>Premium wine pairings</li>
+                    <li>Elevated culinary experience</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <h2>Investment Opportunity</h2>
+        
+        <div class="highlight-box">
+            <h3 style="color: #d4af37; text-align: center; margin-bottom: 20px;">Seeking: $450,000 - $500,000</h3>
+            <p style="text-align: center; font-size: 1.1em;">
+                Strategic investment opportunity in a differentiated café and paninoteca concept 
+                positioned in Bradley Beach's growing culinary market.
+            </p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-number">18-24</span>
+                <span class="stat-label">Months to Break-Even</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">2026</span>
+                <span class="stat-label">Target Opening</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">24</span>
+                <span class="stat-label">Years Chef Experience</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">2x</span>
+                <span class="stat-label">Revenue Streams</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-dark">
+    <div class="container">
+        <h2>Competitive Advantages</h2>
+        
+        <div class="experience-box">
+            <h3>Dual-Concept Model</h3>
+            <p>Two distinct revenue streams maximize space utilization and market reach. The daytime paninoteca builds consistent cash flow and community loyalty, while Friday fine dining creates premium revenue and brand prestige.</p>
+        </div>
+
+        <div class="experience-box">
+            <h3>Strategic Location</h3>
+            <p>Bradley Beach offers proximity to affluent markets with lower overhead than competing coastal towns. The Jersey Shore's seasonal influx provides additional revenue potential during peak months.</p>
+        </div>
+
+        <div class="experience-box">
+            <h3>Authentic Italian Heritage</h3>
+            <p>Rooted in genuine Sicilian café traditions and contemporary Italian techniques, Santello's offers authenticity that differentiates from typical Italian-American concepts.</p>
+        </div>
+
+        <div class="experience-box">
+            <h3>Experienced Leadership</h3>
+            <p>Executive Chef with 24 years of culinary experience, including work at Tasca (Best Restaurant in New Jersey, 2024) and acclaimed NYC establishments. Proven track record in both high-volume and fine dining operations.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <h2>Financial Highlights</h2>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="experience-box">
+                <h3>Capital Allocation</h3>
+                <ul>
+                    <li>Build-out and equipment</li>
+                    <li>Initial inventory and supplies</li>
+                    <li>Marketing and pre-opening expenses</li>
+                    <li>Working capital reserve</li>
+                    <li>Licensing and permits</li>
+                </ul>
+            </div>
+
+            <div class="experience-box">
+                <h3>Revenue Strategy</h3>
+                <ul>
+                    <li>Daytime paninoteca: High-volume, consistent daily revenue</li>
+                    <li>Friday dining: Premium pricing, reservation-only exclusivity</li>
+                    <li>Catering and private events potential</li>
+                    <li>Seasonal Shore traffic amplification</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <p style="text-align: center; font-size: 1.1em; margin: 0;">
+                    Comprehensive business plan and detailed financial projections available upon request.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Partner With Santello's</h2>
+        <p style="font-size: 1.2em; margin: 20px 0; max-width: 700px; margin-left: auto; margin-right: auto;">
+            Join us in creating Bradley Beach's premier Italian dining destination. 
+            Request our complete business plan and investment prospectus.
+        </p>
+        <a href="/cdn-cgi/l/email-protection#197a717c7f597e76757d757076776b7c6a6d786c6b78776d377a7674" class="cta-button">Request Business Plan</a>
+        <a href="tel:+19174789855" class="cta-button">Schedule Meeting</a>
+        <p style="margin-top: 30px; font-size: 0.9em; color: #999;">
+            Chef Rob Santello | 917-478-9855
+        </p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Santello's Paninoteca and Café. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">Bradley Beach, New Jersey</p>
+    </div>
+</footer>
+```
+
+</body>
+</html>
